@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,27 +79,6 @@
 					event.target.parentElement.parentElement.remove();
 				}
 			});
-
-		// Event listener for edit button click
-		document.getElementById("todo-list").addEventListener("click", function (event) {
-			if (event.target.classList.contains("edit-btn")) {
-				const taskText = event.target.parentElement
-					.parentElement.querySelector(".task-text");
-				const editInput = event.target.parentElement
-					.parentElement.querySelector(".edit-input");
-				if (taskText.style.display !== "none") {
-					taskText.style.display = "none";
-					editInput.style.display = "block";
-					editInput.focus();
-					event.target.innerHTML = "";
-				} else {
-					taskText.textContent = editInput.value;
-					taskText.style.display = "inline";
-					editInput.style.display = "none";
-					event.target.innerHTML = "✎";
-				}
-			}
-		});
 	</script>
 </body>
 
